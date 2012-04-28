@@ -1,0 +1,25 @@
+<div class="section">
+  <% if isAdmin? %>
+  <div class="admin_section_body">
+  <% else %>
+  <div class="section_body">
+  <% end %>
+    <h2><%= section.name %> </h2>
+    <p><%= section.description %></p>
+  </div>
+  <% if isAdmin? %>
+  <div class="admin_section_open">
+  <% else %>
+  <div class="section_open">
+  <% end %>
+    <p> <%= link_to section.name, section %> </p>
+  </div>
+  <% if isAdmin? %>
+  <div class="section_tools">
+    <a href=""><p> Move Up </p></a>
+    <a href=""><p> Edit </p></a>
+    <a href=""><p> Delete </p></a>
+    <a href=""><p> Move Down </p></a>
+  </div>
+  <% end %>
+</div>

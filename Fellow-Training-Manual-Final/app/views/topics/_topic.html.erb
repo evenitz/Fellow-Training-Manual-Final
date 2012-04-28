@@ -1,0 +1,26 @@
+<div class="topic">
+  <% if isAdmin? %>
+    <div class="admin_topic_body">
+  <% else %>
+    <div class="topic_body">
+  <% end %>
+    <h2><%= topic.name %></h2>
+    <p> <%= topic.description %> </p>
+  </div>
+  <% if isAdmin? %>
+    <div class="admin_topic_open">
+  <% else %>
+    <div class="topic_open">
+  <% end %>
+    <p> <%= link_to "Open", topic %></p>
+  </div>
+  <% if isAdmin? %>
+  <div class="topic_tools">
+    <a href=""><p> Move Up </p></a>
+    <p><%= link_to "Edit", edit_topic_path %><p>
+    <p><%= link_to "delete", topic, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete #{topic.name}" %></p>
+  	<a href=""><p> Move Down </p></a>
+ </div>
+ <% end %>
+</div>

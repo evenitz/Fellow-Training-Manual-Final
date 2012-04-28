@@ -1,0 +1,12 @@
+<% content_for :nav do %>
+  <li> <%= link_to "library", library_path %> </li>
+  <li> <%= link_to @topic.section.name, section_path(@topic.section) %> </li>
+  <li> <%= link_to @topic.name, topic_path(@topic) %> </li>
+<% end %>
+
+<div id="completed">
+  <h1> Topic Complete </h1>
+  <p> You have finished the <%= @topic.name %> topic <p>
+  <p> Continue on to the next <%= link_to "topic", topic_path(@nextTopic) %> or to the <%= link_to "library", library_path %> </p>
+
+</div>

@@ -1,0 +1,16 @@
+<% content_for :nav do %>
+  <li> <%= link_to "Library", library_path %> </li>
+<% end %>
+
+  <!--<div id="Prev-Page">
+  </div>
+  <div id="Next-Page">
+  </div> -->
+  <div id="Title">
+    <h1> Library </h1>
+  </div>
+  <div id="sections">
+      <%= render(@sections) || 'No sections have been created yet' %>
+  </div>
+
+

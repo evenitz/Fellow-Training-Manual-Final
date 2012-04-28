@@ -1,0 +1,15 @@
+<% content_for :nav do %>
+  <li> <%= link_to "library", library_path %> </li>
+  <li> <%= link_to @topic.section.name, section_path(@topic.section) %> </li>
+  <li> <%= link_to @topic.name, @topic %> </li>
+<% end %>
+
+<div id="Title">
+  <h1> <%= @topic.name %> </h1>
+</div>
+<% if isAdmin? %>
+  <p><a href="<%=params[:id]%>/pages/new" class="link1">New Page</a></p>
+<% end %>
+<div class="pages">
+  <%= render @pages %>
+</div>

@@ -1,0 +1,27 @@
+<div id="form_data">
+    <div class="row">
+    <div class="span6">
+      <h1>Create new Page</h1>
+      <%= form_for(@page) do |f| %>
+
+        <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        </div>
+        <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+        </div>
+        <div class="field">
+        <%= f.label :html %>
+        <%= f.text_area :html %>
+        </div>
+        <%= f.hidden_field :topic_id, :value => params[:topic_id] %>
+
+        <div class="actions">
+        <%= f.submit "Create Page", class: "btn btn-large btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

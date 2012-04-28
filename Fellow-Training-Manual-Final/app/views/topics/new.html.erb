@@ -1,0 +1,22 @@
+<div id="form_data">
+<div class="row">
+  <div class="span6">
+    <h1>Create new Topic</h1>
+    <%= form_for(@topic) do |f| %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>  
+      <%= f.hidden_field :section_id, :value => params[:section_id] %>
+      <div class="actions">
+      <%= f.submit "Create Topic", class: "btn btn-large btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

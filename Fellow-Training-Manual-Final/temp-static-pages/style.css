@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, p {
+font-family: Helvetica, Arial, sans-serif ;
+}
+
+p {
+font-size: 13px;
+line-height: 20px;
+color: #302e28;
+}
+
+#top_container, #header_menu { margin: 0 auto; width: 960px; text-align: left; }
+
+<!-- #header_wrapper, #footer_nav { margin: 0 auto; width: 960px; text-align: left; } -->
+
+
+#header_logo {
+background: url(images/CGFManual_header_bg.jpg) repeat-x top;
+margin: 0 auto;
+width: 100%;
+height: 100px;
+padding-top: 0px;
+position: relative;
+z-index: 5;
+float: center;
+}
+
+#footer_nav {
+background: url(images/CGFManual_header_bg.jpg) repeat-x top;
+margin: 0 auto;
+width: 100%;
+height: 100px;
+padding-top: 0px;
+position: relative;
+z-index: 5;
+}
+
+#header_menu li {
+display: block;
+margin: 0 0 10px 40px;
+font-size: 22px;
+text-transform: uppercase;
+color: orange;
+text-shadow: white 1px 1px 1px ;
+}
+
+A:link {text-decoration: none; color: orange;}
+A:visited {text-decoration: none; color: orange;}
+A:active {text-decoration: none; color: orange;}
+A:hover {text-decoration: none; color: green;}

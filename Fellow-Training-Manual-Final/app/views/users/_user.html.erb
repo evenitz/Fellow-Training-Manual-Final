@@ -1,0 +1,8 @@
+<ul class="user">
+  <li><%= link_to user.name, user_path(user) %></li>
+  <li><%= user.email %></li>
+  <li>User status </li> 
+  <li>admin: <%= user.admin? %></li>
+  <li><%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete #{user.name}" %></li>
+</ul>
